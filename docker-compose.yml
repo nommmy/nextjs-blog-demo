@@ -1,0 +1,13 @@
+version: '3.9'
+services:
+  web:
+    container_name: web 
+    build: 
+      context: ./web
+    ports:
+      - 3000:3000
+    tty: true
+    volumes:
+      - nextjs-blog-demo:/workspace:cached
+volumes:
+    nextjs-blog-demo:
